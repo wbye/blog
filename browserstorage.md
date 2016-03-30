@@ -9,6 +9,7 @@ Cookies 可以通过服务端使用 Set-Cookie Http header来设置和修改，�
 
 ###浏览器兼容性
 ![Cookie兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/cookie_compatibility.png)
+[详细请参考](http://caniuse.com/#search=cookie)
 
 ### 在浏览器中操作如下：
 ```
@@ -29,10 +30,10 @@ document.cookie="test=yui;domain=.baidu.com;expires=0");
 ###需要注意的地方：
 1.通过上面的代码，可以看到document.cookie是个可访问的属性，但是它有内置的setter和getter的function,而不是一个简单的字符串数据,你的get和set都会调用这些原生内置的函数。
 
-2.cookie支持跨域，可以通过在根域名设置cookie，共享多个域名的数据。
+2.cookie支持跨域，可以通过在根域名设置cookie，共享多个子域名的数据。
 
 ###Cookie的Chrome浏览器实现
-[cookie解析](https://code.google.com/p/chromium/codesearch#chromium/src/net/cookies/parsed_cookie.h)
+[cookie解析](https://code.google.com/p/chromium/codesearch#chromium/src/net/cookies/parsed_cookie.h):  https://code.google.com/p/chromium/codesearch#chromium/src/net/cookies/parsed_cookie.h
 
 ##2.Web Storage
 Web Storage有两种机制,分别为sessionStorage和localStorage。
@@ -42,6 +43,7 @@ sessionStorage用于本地存储一个会话（session）中的数据，这些�
 
 ###浏览器兼容性
 ![Web Storage浏览器兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/storage_comoatibility.png)
+[详细请参考](http://caniuse.com/#search=localstorage): http://caniuse.com/#search=localstorage
 ### 代码示例(以localStorage为例)
 ```
 var username = 'helloworld';
@@ -81,6 +83,7 @@ IndexedDB 分别为同步和异步访问提供了单独的 API ,异步 API 方�
 IndexDb是NoSQL数据库，是一种支持事务的浏览器数据库，基本操作就是，打开数据库，增删改查各种。
 ###浏览器兼容性
 ![IndexDB兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/indexdb_compatibility.png)
+[详细请参考](http://caniuse.com/#search=IndexDB): http://caniuse.com/#search=IndexDB
 ###代码示例 - 1.打开数据库
 ```
 //处理浏览器兼容性
@@ -248,7 +251,7 @@ request.onsuccess  = function (event) {
 };
 ```
 
-####indexDb还有游标查找功能，限于篇幅，不说了
+####indexDb还有游标查找功能，限于篇幅，就不展开介绍了
 
 
 ##4.WebSql
@@ -257,6 +260,7 @@ Web SQL Database API实际上未包含在HTML 5规范之中，它是一个独立
 
 ###浏览器兼容性
 ![WebSql浏览器兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/websql_compatibility.png)
+[详情请参考](http://caniuse.com/#search=WebSql)
 
 ###代码示例
 
@@ -325,19 +329,19 @@ Application Cache翻译成中文为应用程序缓存，是html5中为实现离�
 
 ##小结
 
-目前Cookie的兼容性最好，使用的最广泛，但有被滥用的趋势。Web Storage 兼容比较好，除了老板的IE 6，7不支持外，其他主流浏览器都已经支持了，使用起来也方便简单，适合存储键值对数据。WebSql由于未在HTML5规范中，前景堪忧，适当了解下。IndexDb目前来看，兼容性不太好，但是前景很好，目前由w3c在推广，相信在以后应该有个大爆发。
+目前Cookie的兼容性最好，使用的最广泛，但有被滥用的趋势。Web Storage 兼容比较好，除了老板的IE 6，7不支持外，其他主流浏览器都已经支持了，使用起来也方便简单，适合存储键值对数据。WebSql由于未在HTML5规范中，前景堪忧，适当了解下。IndexDb目前来看，兼容性不太好，但是前景很好，目前由w3c在推广，相信在以后应该有个大爆发(个人看法)。
 Application  Cache目前已经被废弃，Service Workers目前属于起步阶段，感觉离实用还需要时间。
 
 
 
 ###参考链接 
-[caniuse](http://caniuse.com/)
+[caniuse](http://caniuse.com/)： http://caniuse.com/
 
-[Cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
+[Cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)：https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 
-[谷歌开发者中心文档](https://developer.chrome.com/devtools/docs/resource-panel#inspecting-page-resources)
+[谷歌开发者中心文档](https://developer.chrome.com/devtools/docs/resource-panel#inspecting-page-resources)： https://developer.chrome.com/devtools/docs/resource-panel#inspecting-page-resources
 
-[Mozilia 开发者中心](https://developer.mozilla.org/en-US/docs/Web)
+[Mozilia 开发者中心](https://developer.mozilla.org/en-US/docs/Web)：https://developer.mozilla.org/en-US/docs/Web
 
-[Service Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+[Service Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)：http://www.html5rocks.com/en/tutorials/service-worker/introduction/
 	
