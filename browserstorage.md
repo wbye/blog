@@ -9,7 +9,7 @@ Cookies 可以通过服务端使用 Set-Cookie Http header来设置和修改，�
 
 ###浏览器兼容性
 ![Cookie兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/cookie_compatibility.png)
-[详细请参考](http://caniuse.com/#search=cookie)
+[详细请参考](http://caniuse.com/#search=cookie) http://caniuse.com/#search=cookie
 
 ### 在浏览器中操作如下：
 ```
