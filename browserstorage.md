@@ -1,7 +1,7 @@
 # 浏览器存储及使用
-作者:Maybe@Maxleap
+作者:叶文兵，本科毕业于安徽师范大学，入坑前端开发快3年，普通页面仔一枚。现任MaxLeap UX组开发人员，负责公司主要项目前端开发工作，逐渐往nodejs全栈方向发展。
 
-伴随着WEB的发现，浏览器的存储方式及技术不断的发生更改，从刚开始的cookie，到localstorage，sessionStorage,再到IndexedDB,再到现在的Web SQL,作为一名合格的前端开发，当然需要对这些技术了如指掌并熟练掌握，本文将比较全面的介绍常见的浏览器存储以及其使用。
+伴随着WEB的发现，浏览器的存储方式及技术不断的发生更改，从刚开始的cookie，到localstorage，sessionStorage，再到IndexedDB，再到现在的Web SQL，作为一名合格的前端开发，当然需要对这些技术了如指掌并熟练掌握，本文将比较全面的介绍常见的浏览器存储以及其使用。
 
 ##1.Cookie
 Cookie是一个用户通过浏览器浏览网站产出的信息的票根，Cookies通常被用来标示一个网站用户的浏览经历，它可能包含这个用户的个人偏好或访问这个网站的一些输入信息。用户可以自己随意操作他们浏览器中的Cookie。
@@ -21,14 +21,14 @@ var allCookies = document.cookie;
 //往原来的已经存在的cookie中加入新的cookie
 document.cookie ="test=yui";
 
-//当然也可以在后面加上可选择的选项键值对,例如domain，以及其他path，expires
+//当然也可以在后面加上可选择的选项键值对，例如domain，以及其他path，expires
 document.cookie="test=yui;domain=.baidu.com"
 
-//删除cookie，就是让这个cookie值得expires过,就是设置这个expires为0
+//删除cookie，就是让这个cookie值得expires过，就是设置这个expires为0
 document.cookie="test=yui;domain=.baidu.com;expires=0");
 ```
 ###需要注意的地方：
-1.通过上面的代码，可以看到document.cookie是个可访问的属性，但是它有内置的setter和getter的function,而不是一个简单的字符串数据,你的get和set都会调用这些原生内置的函数。
+1.通过上面的代码，可以看到document.cookie是个可访问的属性，但是它有内置的setter和getter的function，而不是一个简单的字符串数据，你的get和set都会调用这些原生内置的函数。
 
 2.cookie支持跨域，可以通过在根域名设置cookie，共享多个子域名的数据。
 
@@ -36,10 +36,10 @@ document.cookie="test=yui;domain=.baidu.com;expires=0");
 [cookie解析](https://code.google.com/p/chromium/codesearch#chromium/src/net/cookies/parsed_cookie.h):  https://code.google.com/p/chromium/codesearch#chromium/src/net/cookies/parsed_cookie.h
 
 ##2.Web Storage
-Web Storage有两种机制,分别为sessionStorage和localStorage。
+Web Storage有两种机制，分别为sessionStorage和localStorage。
 sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage是一种半持久化的本地存储（会话级别的存储），而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
 
-这两个对象，对外的方法主要有: setItem,getItem,以键值对的形式存储和读取,key按照索引获取当前存储的key值,找不到时返回null，length属性代表当前存储的key，value对数
+这两个对象，对外的方法主要有: setItem，getItem，以键值对的形式存储和读取，key按照索引获取当前存储的key值，找不到时返回null，length属性代表当前存储的key，value对数
 
 ###浏览器兼容性
 ![Web Storage浏览器兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/storage_comoatibility.png)
@@ -48,11 +48,11 @@ sessionStorage用于本地存储一个会话（session）中的数据，这些�
 ```
 var username = 'helloworld';
 var storageUsername;
-var randomArr = [Math.random(),Math.random(),Math.random(),Math.random()];
+var randomArr = [Math.random()，Math.random()，Math.random()，Math.random()];
 var storageRandomArr;
 
-//storage username,key值区分大小写,存入的内容为这个变量调用toString方法的结果
-localStorage.setItem("username",username);
+//storage username，key值区分大小写，存入的内容为这个变量调用toString方法的结果
+localStorage.setItem("username"，username);
 
 //获取
 storageUserName  = localstorage.getItem("username");
@@ -65,7 +65,7 @@ storageUserName  =  localstorage.getItem("username");
 // null
 
 //存储对象时，可以先调用JSON.stringify方法，然后取出的时候再调用JSON.parse方法获取结果
-localStorage.setItem("randomarr",JSON.stringify(randomArrr));
+localStorage.setItem("randomarr"，JSON.stringify(randomArrr));
 storageRandomArr = JSON.parse(localStorage.getItem("randomarr"));
 
 Object.prototype.toString.call(storageRandomArr);
@@ -76,7 +76,7 @@ Object.prototype.toString.call(storageRandomArr);
 ##3.IndexDB
 IndexedDB 是一个为了能够在客户端存储可观数量的结构化数据，并且在这些数据上使用索引进行高性能检索的 API。
 
-IndexedDB 分别为同步和异步访问提供了单独的 API ,异步 API 方法调用完后会立即返回，而不会阻塞调用线程。
+IndexedDB 分别为同步和异步访问提供了单独的 API ，异步 API 方法调用完后会立即返回，而不会阻塞调用线程。
 
 要异步访问数据库，要调用 window 对象 indexedDB 属性的 open() 方法。该方法返回一个 IDBRequest 对象 (IDBOpenDBRequest)；异步操作通过在 IDBRequest 对象上触发事件来和调用程序进行通信。
 
@@ -106,11 +106,11 @@ request.onsuccess = function(event) {
 var dbName = "MyDatabase";
 var dbVersion = 2;//整数
 // open函数接受的第二个参数，代表数据的版本，当打开的版本号比当前的版本号大时，会触发onupgradeneeded这个回调
-var request = window.indexedDB.open(dbName,dbVersion);
+var request = window.indexedDB.open(dbName，dbVersion);
 var studentsData = [{
-    id:"001",name:"xiaoming",email:0
-},{
-    id:"002",name:"xiaoxiang",email:1
+    id:"001"，name:"xiaoming"，email:0
+}，{
+    id:"002"，name:"xiaoxiang"，email:1
 }];
 var tableName = 'students';
 
@@ -120,12 +120,12 @@ request.onerror = function (event) {
 
 request.onupgradeneeded = function (event) {
     var db = event.target.result;
-    //创建表,以id字段作为主键来确保唯一，使用keyPath表示
-    var objectStore = db.createObjectStore(tableName, { keyPath: "id" });
+    //创建表，以id字段作为主键来确保唯一，使用keyPath表示
+    var objectStore = db.createObjectStore(tableName， { keyPath: "id" });
 
     //给表添加索引
-    objectStore.createIndex("name","name",{unique:false});//非unique索引
-    objectStore.createIndex("email","email",{unique:true});//email字段作为unique索引
+    objectStore.createIndex("name"，"name"，{unique:false});//非unique索引
+    objectStore.createIndex("email"，"email"，{unique:true});//email字段作为unique索引
 
     for(var i in studentsData){
         //插入数据
@@ -139,7 +139,7 @@ request.onupgradeneeded = function (event) {
 
 
 ###代码示例 - 3.使用事务添加、删除数据
-transaction() 方法接受两个参数并返回一个事务对象。第一个参数是事务希望跨越的对象存储空间的列表,即数据库中的表名称。如果你希望事务能够跨越所有的对象存储空间你可以传入一个空数组。第二个参数如果你没有为第二个参数指定任何内容，默认只读。
+transaction() 方法接受两个参数并返回一个事务对象。第一个参数是事务希望跨越的对象存储空间的列表，即数据库中的表名称。如果你希望事务能够跨越所有的对象存储空间你可以传入一个空数组。第二个参数如果你没有为第二个参数指定任何内容，默认只读。
 
 ![事务方法接受参数](http://7xs3q2.com1.z0.glb.clouddn.com/transaction_function.png)
 
@@ -148,11 +148,11 @@ transaction() 方法接受两个参数并返回一个事务对象。第一个参
 var dbName = "MyDatabase";
 var request = window.indexedDB.open(dbName);
 var addData = [{
-    id:"003",name:"xiaofang1",email:"3@qq.com"
-},{
-    id:"004",name:"xiaofang2",email:"4@qq.com"
-},{
-    id:"005",name:"xiaofang3",email:"5@qq.com"
+    id:"003"，name:"xiaofang1"，email:"3@qq.com"
+}，{
+    id:"004"，name:"xiaofang2"，email:"4@qq.com"
+}，{
+    id:"005"，name:"xiaofang3"，email:"5@qq.com"
 }];
 var tableName = 'students';
 
@@ -163,7 +163,7 @@ request.onerror = function(event) {
 //代开数据成功的回调
 request.onsuccess = function(event) {
     var db = event.target.result;
-    var transaction = db.transaction([tableName],'readwrite');
+    var transaction = db.transaction([tableName]，'readwrite');
     var objectStore;
     var i;
 
@@ -206,7 +206,7 @@ request.onsuccess  = function (event) {
     var transaction;
 
     db =  event.target.result;
-    transaction= db.transaction([tableName],'readwrite');
+    transaction= db.transaction([tableName]，'readwrite');
     transaction.onerror = function (event) {
         //处理错误
         console.log("error when delete 001 "+ event.target.errorCode);
@@ -267,20 +267,20 @@ Web SQL Database API实际上未包含在HTML 5规范之中，它是一个独立
 ```
 var db; 
 var info = {
-    dbName :"MyDataBase",//数据库名称
-    dbVersion:"0.1",//版本
-    dbDisplayName:"测试数据库",//显示名称
-    dbEstimatedSize:10*1024*1024 //数据库大小,单位字节
+    dbName :"MyDataBase"，//数据库名称
+    dbVersion:"0.1"，//版本
+    dbDisplayName:"测试数据库"，//显示名称
+    dbEstimatedSize:10*1024*1024 //数据库大小，单位字节
 };
 
-db = window.openDatabase(info.dbName,info.dbVersion,info.dbDisplayName,info.dbEstimatedSize);
+db = window.openDatabase(info.dbName，info.dbVersion，info.dbDisplayName，info.dbEstimatedSize);
 
 //初始化students表
 db.transaction(function (trans) {
     //执行Sql，如果students表不存在，则创建改表
-    trans.executeSql("create table if not exists students(id unique,name text null,email text null)",[], function () {
+    trans.executeSql("create table if not exists students(id unique，name text null，email text null)"，[]， function () {
         console.log("init success");
-    }, function () {
+    }， function () {
         console.log("error happen");
     });
 });
@@ -288,32 +288,32 @@ db.transaction(function (trans) {
 
 //插入数据
 db.transaction(function (trans) {
-	trans.executeSql("insert into students(name,email) values(?,?)",['xiaoming','1@qq.com'], function () {
+	trans.executeSql("insert into students(name，email) values(?，?)"，['xiaoming'，'1@qq.com']， function () {
 	    console.log("insert ok 1");
-	}, function () {
+	}， function () {
 	    console.log(arguments);
 	});
-	trans.executeSql("insert into students(name,email) values(?,?)",['xiaohong','2@qq.com'],function () {
+	trans.executeSql("insert into students(name，email) values(?，?)"，['xiaohong'，'2@qq.com']，function () {
 	    console.log("insert ok 2");
-	}, function () {
+	}， function () {
 	    console.log(arguments);
 	});
 });
 
 //删除数据
 db.transaction(function (trans) {
-   trans.executeSql("delete from students where name = ? ",['xiaohong'], function (trans,result) {
+   trans.executeSql("delete from students where name = ? "，['xiaohong']， function (trans，result) {
        console.log("delete success");
-   }, function (trans,message) {
+   }， function (trans，message) {
        console.log("error happen");
    });
 });
 
 //查询数据
 db.transaction(function (trans) {
-    trans.executeSql("select * from students",[], function (trans,result) {
+    trans.executeSql("select * from students"，[]， function (trans，result) {
         console.log("总共查询到 "+result.rows.length+" 条数据");
-    }, function (trans,message) {
+    }， function (trans，message) {
         console.log("error happen");
     });
 });
