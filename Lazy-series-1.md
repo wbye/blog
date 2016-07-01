@@ -6,7 +6,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_人类历史上曾诞生了琳琅满目的懒人科技，不断迁就着人性的弱点，有汽车、火车、飞机这种大型地、颠覆式发明，也有一些非常酷炫的小型创意，甚至还诞生了不错的服务，事实上，整个第三产业的市场就是来源于“懒人不想做的事情”。这些创意在改变人类生活的同时，也改变了懒汉的定义，在拥有了大量的新鲜玩意之后，他们的境界正大有提高，事实上，懒已经不是完全意义上的贬义词，在一定程度上，代表着高逼格。_
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为一名码农，更作为一名页面仔，我只想说：哪一个程序员，不想在写代码的时候偷点懒？当然这个懒，不是指那种当个纯粹的搬运工（CTRL+C,CTRL+V大神）。正是为了更“懒”，更愉快，更爽，更有逼格的写代码，才有了这篇文章。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为一名码农，更作为一名页面仔，我只想说：哪一个程序员，不想在写代码的时候偷点懒？当然这个懒，不是指那种当个纯粹的搬运工（CTRL+C,CTRL+V大神）,而是用更少的时间去完成日常的工作任务。正是为了更“懒”、更爽、更有逼格的写代码，才有了这篇文章。
 
 
 ###先看下前端现状
@@ -43,7 +43,7 @@ SASS一瞥
 
 一个命令就可以创建好一个http服务器，真是爽飞了
 
-![http-server](http://7xs3q2.com1.z0.glb.clouddn.com/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
+![http-server](http://7xs3q2.com1.z0.glb.clouddn.com/http-server.jpg)
 
 [Github HttpServer](https://github.com/indexzero/http-server)
 
@@ -58,12 +58,12 @@ GULP是个基于流的构建工具，使用nodejs实现的，这对页面仔来�
 
 页面仔每天做的最多的事就是，刷新浏览器，F5 or CTRL+F5 ...
 
-试想，当我写完HTML，CSS，JS 浏览就自动刷新，这真是飞一般的感觉。Browsersync给你想要的，甚至还他还内置了移动端调试神器WEINRE，简直不要太diao。
+试想，当我写完HTML，CSS，JS 浏览就自动刷新，这真是飞一般的感觉。Browsersync给你想要的，甚至还它还内置了移动端调试神器WEINRE，简直不要太diao。
 
 [Browsersync官网](https://www.browsersync.io)
 
 
-### 光说不练假把式 - 手把手带你飞
+### 光说不练假把式 - 手把手带你起飞
 
 STEP-1：准备好各种环境
 	首先你得有nodejs环境，然后你得全局安装GULP，http-server,browsersync,如下所示：
@@ -75,7 +75,7 @@ STEP-2：克隆我事先写好的git懒人模板仓库
 	![DEMO](http://7xs3q2.com1.z0.glb.clouddn.com/git-clone-lazy.jpg)
 	
 STEP-3：查看仓库README文件
-	在终端运行： npm install
+	在终端运行： npm install（安装超时的同学，建议使用淘宝npm源，具体可见[CNPM](http://npm.taobao.org/)）
 	![DEMO1](http://7xs3q2.com1.z0.glb.clouddn.com/cnpm-complete.jpg)
 	完成后运行： npm run http-server ,  
 	再另启个终端，运行： npm run bs-server
@@ -84,7 +84,7 @@ STEP-3：查看仓库README文件
 STEP-4：体验一把做懒人的感觉O(∩_∩)O
 	![DEMO1](http://7xs3q2.com1.z0.glb.clouddn.com/record-4.gif)
 
-STEP-5: 懒人第一阶段完成，好了不写了，我要去好好板砖了
+STEP-5: 懒人第一阶段完成，好了不写了，我要去好好搬砖了
 		
 	
 
