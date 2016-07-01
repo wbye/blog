@@ -20,7 +20,7 @@
 
 或者像这样：
 
-![EMMET](http://7xs3q2.com1.z0.glb.clouddn.com/record-2.gif)
+![EMMET](http://7xs3q2.com1.z0.glb.clouddn.com/new-record-2.gif)
 
 EMMET：前端神器，页面仔必备啊！
 
