@@ -8,7 +8,7 @@ Cookie是一个用户通过浏览器浏览网站产出的信息的票根，Cooki
 Cookies 可以通过服务端使用 Set-Cookie Http header来设置和修改，当然也可以使用javascript的document.cookie去操作。
 
 ###浏览器兼容性
-![Cookie兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/cookie_compatibility.png)
+![Cookie兼容性](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-f9590c3f-dfcc-4ee6-a421-ca55227e9167.jpeg)
 [详细请参考](http://caniuse.com/#search=cookie) http://caniuse.com/#search=cookie
 
 ### 在浏览器中操作如下：
@@ -42,7 +42,7 @@ sessionStorage用于本地存储一个会话（session）中的数据，这些�
 这两个对象，对外的方法主要有: setItem，getItem，以键值对的形式存储和读取，key按照索引获取当前存储的key值，找不到时返回null，length属性代表当前存储的key，value对数
 
 ###浏览器兼容性
-![Web Storage浏览器兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/storage_comoatibility.png)
+![Web Storage浏览器兼容性](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-00b3381a-9935-4cc1-b2cd-d3da3daed4bb.jpeg)
 [详细请参考](http://caniuse.com/#search=localstorage): http://caniuse.com/#search=localstorage
 ### 代码示例(以localStorage为例)
 ```
@@ -82,7 +82,7 @@ IndexedDB 分别为同步和异步访问提供了单独的 API ，异步 API 方
 
 IndexDb是NoSQL数据库，是一种支持事务的浏览器数据库，基本操作就是，打开数据库，增删改查各种。
 ###浏览器兼容性
-![IndexDB兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/indexdb_compatibility.png)
+![IndexDB兼容性](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-fbcfbff3-9b6f-4825-932b-771b0bb4ea58.jpeg)
 [详细请参考](http://caniuse.com/#search=IndexDB): http://caniuse.com/#search=IndexDB
 ###代码示例 - 1.打开数据库
 ```
@@ -141,7 +141,7 @@ request.onupgradeneeded = function (event) {
 ###代码示例 - 3.使用事务添加、删除数据
 transaction() 方法接受两个参数并返回一个事务对象。第一个参数是事务希望跨越的对象存储空间的列表，即数据库中的表名称。如果你希望事务能够跨越所有的对象存储空间你可以传入一个空数组。第二个参数如果你没有为第二个参数指定任何内容，默认只读。
 
-![事务方法接受参数](http://7xs3q2.com1.z0.glb.clouddn.com/transaction_function.png)
+![事务方法接受参数](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-cb8b7c5f-a8f2-4492-b013-383a49e86ef6.jpeg)
 
 ####插入学生003，004，005
 ```
@@ -259,7 +259,7 @@ request.onsuccess  = function (event) {
 Web SQL Database API实际上未包含在HTML 5规范之中，它是一个独立的规范，它引入了一套使用SQL操作客户端数据库的API，这些API有同步的，也有异步的，一般情况下，都会使用异步API。它的核心方法有三个：openDatabase，transaction和executeSql。这些API已经被广泛的实现在了不同的浏览器里，尤其是手机端浏览器。虽然W3C官方在2011年11月声明已经不再维护Web SQL Database规范，但由于其广泛的实现程度，了解这些API对 Web开发还是非常有必要的。
 
 ###浏览器兼容性
-![WebSql浏览器兼容性](http://7xs3q2.com1.z0.glb.clouddn.com/websql_compatibility.png)
+![WebSql浏览器兼容性](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-e63b139b-d2db-4825-bf4a-47332ee72896.jpeg)
 [详情请参考](http://caniuse.com/#search=WebSql)
 
 ###代码示例
