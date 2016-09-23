@@ -30,7 +30,7 @@ _目前看来, 微信这一套应该是类似 weex,  描述性语法 生成多�
 ![微信小程序群](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-1dd7cf7b-d560-4e6e-89c2-b16ff261fdc9.jpg)
 
 ###上个段子手图片
-![上个段子手图片](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-2e64a6f7-c349-4458-8d66-fc5ea4134899.jpg)
+![上个段子手图片](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-7ac8c9d7-1569-40c6-b554-1e890864d5e4.jpg)
 
 总结下就是：微信应用号很火
 
