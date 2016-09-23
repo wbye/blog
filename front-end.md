@@ -29,11 +29,6 @@ _目前看来, 微信这一套应该是类似 weex,  描述性语法 生成多�
 有幸加入到一个微信应用号开发者的群，加群之火爆，只能上图了。
 ![微信小程序群](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-1dd7cf7b-d560-4e6e-89c2-b16ff261fdc9.jpg)
 
-###上个段子手图片
-![上个段子手图片](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-87e08982-06b8-4509-a3c3-8117fd073366.jpg)
-
-总结下就是：微信应用号很火
-
 ###再看下前端发展趋势
 
 ####表格布局与内联样式满天飞
@@ -75,3 +70,5 @@ React-Native的出现，让前端在不了解Android和iOS原生组件具体实�
 [微信应用号教程二](http://wxopen.notedown.cn)
 
 [微信应用号资源汇总](https://github.com/Aufree/awesome-wechat-weapp)
+
+[微信应用号段子图片](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-87e08982-06b8-4509-a3c3-8117fd073366.jpg)
