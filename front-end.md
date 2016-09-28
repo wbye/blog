@@ -69,8 +69,6 @@ React-Native的出现，让前端在不了解Android和iOS原生组件具体实�
 
 [微信应用号开发教程二](http://notedown.cn/weixin)
 
-[微信应用号开发教程三](http://wxopen.notedown.cn)
-
 [微信应用号资源汇总](https://github.com/Aufree/awesome-wechat-weapp)
 
 [微信应用号段子图片](https://cscdn.maxleap.cn/2.0/download/NTdiNDE3NzMyYTYyYTYwMDA3N2M5NDVj/zcf-87e08982-06b8-4509-a3c3-8117fd073366.jpg)
